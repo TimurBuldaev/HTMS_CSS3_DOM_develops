@@ -1,0 +1,244 @@
+/* Использование шрифтов со стороннего ресурса */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Обращение ко всем селекторам */
+/* * {
+    padding: 0;
+    margin: 0;
+} */
+
+body {
+    background-color: #bdb8b8;
+    color: #0f141e; 
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+    /* идентично верхним трем строкам */
+    /* font: normal 16px 'Roboto', sans-serif; */
+}
+
+/* .head {
+   margin-bottom: 20px;
+} */
+
+/* стили для ссылок (тег а)*/
+a {
+ color: black;
+ text-decoration: none;
+}    
+
+/* отработка псевдоселекторов (или стейты) */
+/* hover  это наведение курсора мыши */
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: blue;
+}
+
+a:visited {
+    color: grey;
+}
+
+/* стилизация картинки */
+.avatar {
+    width: 200px;
+    border-radius:  22px;
+    box-shadow: 4px 4px 14px rgba(0,0,0,25);
+}
+
+/* расположим картинку и информацию в строчку */
+.info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* правила для определенных расширений экрана */
+@media(max-width: 700px) {
+    .info {
+        text-align: center; 
+        display: block;
+    }
+}
+
+/* стилизация заголовка около картинки через div class */
+/* p значит обработка тегов P (вложенные параграфы) */
+.info p {
+    color: #86898f;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 5px; */
+}
+
+/* Box model родительский контейнер*/
+.container {
+    max-width: 1000px;    
+    margin: auto;
+    padding-top: 30px;
+}
+
+/* интересы   */
+/* .interes {
+    background: darkgray;
+    padding: 15px;
+    border: 5px solid red;
+    margin: 20px;
+} */
+
+
+/* общая стилистика */
+.bg-yellow {
+    background:  #fff9dc;
+}
+.bg-green {
+    background:  #e5ffe7;
+}
+.bg-red {
+    background:  #ffe5e5;
+}
+
+
+.card {
+    padding: 15px 20px;
+    /* template */
+    /* background: cyan; */
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+/* списки ol */
+.list {
+    padding: 0 20px;
+    /* list-style: none; */ 
+}
+
+/* обращение к тегам li */
+.list li {
+    color: #86898f; 
+    margin-bottom: 10px;
+    /* border-bottom: 1px; */
+}
+
+.table {
+     width: 100%;
+}
+
+.table td  {
+    padding-bottom: 10px;
+}
+
+/* Текст в таблице делаем частично серым */
+/* Работа с псевдоселектором, выбор столбцов в аргументе*/
+.table td:nth-child(2),  td:nth-child(3) {
+    color: #86898f;
+}
+
+/* even = четное odd нечетное */
+/* .table tr:nth-child(odd) {
+    background: brown;
+} */
+
+/* Youtube курсы */
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact h4 {
+    text-align: center;
+}
+
+.form-group label {
+    /* Располагаем поля ввода каждый на своей строчке */
+    display: block;     
+    font-size: 14px;
+    color: #86898f;
+}
+
+/* стилизуем сами инпуты */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 15px 0 10px;
+    /* background: transparent; */
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    outline: none;
+    font-family: inherit;
+} 
+
+/* стилизация Имя и Адрес в одной строчке через flex */
+.row {
+     display: flex;
+     margin-bottom: 20px;
+}
+
+.row > .form-group {
+    width: 50%;
+}
+
+/* устраняем проблему по правой границе (не до конца до ширины 100) */
+.row > .form-group:first-child {
+    margin-right: 20px;
+}
+
+.info-text {
+    /* display: flex; */
+    margin-left: 40px;
+}
+
+.info-text h4 {
+ margin-bottom: 10px;   
+}
+
+/* стилизация кнопки */
+.btn {
+    background: #111;
+    padding: 15 px 20 px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Position */
+/* .position {
+    position: relative;
+    border: 4px solid black;
+    margin-top: 40 px;
+    padding: 20px;
+    height: 300px;
+}
+
+.box {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background: lightcoral;
+} */
+
+.btn2 {
+    
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Личная страница</title>
+    <link  href="style.css" rel="stylesheet"/>
+    <!-- <link rel="stylesheet" href=""> -->
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="info">
+            <!-- <img src="Cat.jpg"  alt="pic" class="avatar" onclick="handleClick()" /> -->
+            <img src="Cat.jpg"  alt="pic" class="avatar"/>
+                <div class="info-text">
+                    <h1>Обо мне</h1>
+                    <p id="myLife"><strong>Жизнь</strong></p>  
+                    <p>Работа</p>    
+                    <h4 class="interes">Интересы</h4>
+                        
+                    <a href="https://vinhxuan.ru/" target="_blank">Вьетнамский вин-чун</a> 
+                    |
+                    <a href="https://www.rlocman.ru" target="_blank">Радиоэлектроника</a> 
+                    |   
+                    <a href="https://habr.com/ru/post/531406/" target="_blank">Медитации</a>
+                    |
+                    <a href="https://www.youtube.com/watch?v=CxgOKJh4zWE" target="_blank">Программирование</a> 
+
+                    <!-- кнопка  -->
+                    <!-- <br>
+                    <button class="btn-interest">toggle</button> -->
+                    <!-- <button class="btn-interest" onclick="myCount()">Toggle!</button> -->
+                </div>    
+        </div>    
+                
+        
+        <div class="card bg-red">
+            <h2>Опыт</h2>
+            <table class="table">
+                <tr>
+                    <td>ФГУП</td>
+                    <td>Главный инженер</td>
+                    <td>2003-2011</td>
+                </tr>
+                <tr>
+                    <td>ООО "МЦ"</td>
+                    <td>Директор</td>
+                    <td>2011-2022</td>
+                </tr>        
+                <tr>
+                    <td>Free</td>
+                    <td>free </td>
+                    <td>2022-now</td>
+                </tr>        
+                <tr>
+                    <td>Free2</td>
+                    <td>free2 </td>
+                    <td>2022-now</td>
+                </tr>        
+            </table>
+        </div>        
+        
+        <div class="card bg-yellow">
+            <h3>Самые надежные источники по обучению программированию с нуля</h3>
+            <ol class="list">
+                <li>
+                    <a href="https://www.youtube.com/watch?v=DOEtVdkKwcU" target="_blank">Владилен Минин. HTML.</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=SpCUuyZZTp8&list=RDCMUCg8ss4xW9jASrqWGP30jXiw&index=3" target="_blank">Владилен Минин. CSS.</a>    
+                </li>
+                    <a href="https://www.youtube.com/watch?v=CxgOKJh4zWE" target="_blank">Богдан Сташчук. 11 часов JavaScript.</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=W4MIiV4nZDY&list=RDCMUCiyasqPIZz8zzbJp7-17dJw&start_radio=1&rv=W4MIiV4nZDY&t=4" target="_blank">Богдан Сташчук. HTML для начинающих.</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=W4MIiV4nZDY" target="_blank">Богдан Сташчук. React для начинающих.</a>
+                </li>
+            </ol>
+        </div>
+        
+        <div class="card bg-green">    
+            <h3>Дополнительные ресурсы по программированию</h3>
+            
+            <ul class="link-list">
+                <li>
+                    <a href="https://www.youtube.com/watch?v=Bluxbh9CaQ0" target="_blank">Владилен Минин. JavaScript. Полный курс за 6 часов.</a> 
+                </li>                    
+                <li>
+                    <a href="https://www.youtube.com/watch?v=QeUp3CahkQw" target="_blank">Владилен Минин. Visual Studio Code для начинающих.</a> 
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=zZBiln_2FhM" target="_blank">Владилен Минин. Git и GitHub для начинающих.</a> 
+                </li>
+                <!-- <div class="wrapper">
+                    <button class="btn">Добавить ресурс</button>
+                </div>     -->
+            </ul>
+        </div>
+
+        <div class="contact">
+            <h4>Обратная связь</h4>
+            
+            <form action="/">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="name">Ваше имя: </label>
+                        <input type="text" id="name" placeholder="your name..."> 
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Ваш email: </label>
+                        <input type="email" id="email" placeholder="your email...">
+                    </div>                
+                </div>
+                
+                <div class="form-group">
+                    <label for="text">Ваше сообщение: </label>
+                    <textarea id="text" rows="2" cols="35">your text...</textarea>
+                </div>                                
+                
+                <!-- вместо этой кнопки ставим кнопку React -->
+                <!-- <input class="btn" type="submit" value="Связаться!">  -->
+                
+            </form>
+        </div>
+
+     <!-- React -->
+     <!-- внутри основного div, что бы свойства предка наследовались -->
+    <div id="like_button_container"></div>
+     <!-- Добавление ссылок Реакта -->
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+     <!-- Загрузим наш React-компонент -->
+    <script src="like_button.js"></script>
+    
+
+    </div> <!-- конец основного div "container" -->
+
+    <!-- добавляем поиск элемента через скрипт по id(text)-->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
